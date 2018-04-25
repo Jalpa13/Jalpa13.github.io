@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Jalpa Shukla- Simple Web Form</title>
+<meta charset="utf-8">
+<script>
+        function cookie()
+         {
+           var fName=document.getElementById('LABEL-fName').value;
+           var lName=document.getElementById('LABEL-lName').value;
+           var email=document.getElementById('LABEL-email').value;
+           var x=null;
+               if(document.getElementById('LABEL-tooHard').checked)
+                  {
+                    x=document.getElementById('LABEL-tooHard').value;
+                  }
+               else if(document.getElementById('LABEL-justRight').checked)
+                  {
+                    x=document.getElementById('LABEL-justRight').value;
+                  }
+              else if(document.getElementById('LABEL-tooEasy').checked)
+                  {
+                    x=document.getElementById('LABEL-toEasy').value;
+                  }
+          var y="No";
+              if(document.getElementById('LABEL-html').checked)
+                  {
+                    y="Yes";
+                  }
+          var z="No";
+              if(document.getElementById('LABEl-css').checked)
+                  {
+                    z="Yes";
+                  }
+         var j="No";
+              if(document.getElementById('LABEl-javascript').checked)
+                  {
+                    j="Yes";
+                  }  
+        var none="No";
+              if(document.getElementById('LABEl-none').checked)
+                  {
+                    none="Yes";
+                  }                  
+        var coockieD="First Name="+fName+"; Last Name:"+lName+"; Email:"+email+"Exam Toughness:"+x+"; Languages Learned:HTML:"+y+"; CSS"+z+"; JavaScript"+j+"; Nothing:"+none;
+                 document.cookie=cookieD;
+                 alert(document.cookie);
+                 }          
+                
+   </script>
+
+</head>
+<body>
+<h1>
+   <em> Jalpa Shukla- Simple Web Form</em>
+</h1>
+<form id="simple_form">
+<fieldset id="static_info">
+ <legend>
+  <strong>Static Information</strong>
+ </legend>
+<label for="first_name" form="static_info">First Name:</label>
+<input type="text" name="first-name" id="LABEL-fName" form="static_info" size=30">
+<br>
+<label form="last_name">Last Name:</label>
+<input type="text" name="last-name" id"LABEL=lName" form="static_info" size="30">
+<br>
+<label form="static_info" for="email">Email:</label>
+<input type="email" name="email" id="LABEL-email" form="static_info" size="60" placeholder="somebody@example.com">
+<br>
+</fieldset>
+<fieldset id="radio_info">
+<legend>
+<strong>What do you think of this Exam?</strong>
+</legend>
+<label for="too-hard" form="static_info">Too Hard:</label>
+<input type="radio" name="too-hard-radio" id="lbl-tooHard" form="static_info" value="Too Hard">
+<br>
+<label for="just-right" form="static_info">Just Right:</label>
+<input type="radio" name="just-right-radio" id="lbl-justRight" form="static_info" value="Just Right">
+<br>
+<label for="too-easy" form="static_info">Too Easy:</label>
+<input type="radio" name="too-easy-radio" id="lbl-tooEasy" form="static_info" value="Too Easy">
+<br>
+</fieldset>
+<fieldset id="checkbox-info">
+<legend>
+<strong>What did you learn in PROG8165?</strong>
+</legend>
+<label for="html" form="static_info">HTML:</label>
+<input type="checkbox" name="html-checkbox" id="LABEL-html" form="static_info" value="checked">
+<br>
+<label for="css" form="static_info">CSS:</label>
+<input type="checkbox" name="css-checkbox" id="LABEL-css" form="static_info" value="checked">
+<br>
+<label for="javaScript" form="static_info">JavaScript:</label>
+<input type="checkbox" name="javascript-checkbox" id="LABEL-javascript" form="static_info" value="checked">
+<br>
+<label for="nothing" form="static_info">Nothing:</label>
+<input type="checkbox" name="nothing-checkbox" id="LABEL-nothing" form="static_info" value="checked">
+<br>
+</fieldset>
+<input type="submit" name="submit" value="Submit" id="submit" form="static_info" onclick="buildCookie()">
+<footer>
+<p>
+<em> End of Simple Form</em>
+</p>
+</footer>
+</form>
+</body>
+</html>
+
+
